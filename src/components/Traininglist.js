@@ -17,18 +17,19 @@ function Traininglist() {
   },[]);
 
   const fetchTrainings = () => {
-    fetch('https://customerrest.herokuapp.com/api/trainings')
+    fetch('https://customerrest.herokuapp.com/gettrainings')
     .then(response => response.json())
-    .then(data => setTraining(data.content))
+    .then(data => setTraining(data))
     .catch(err => console.err(err))
   }
   
   const columns =[
-    {field:'date', sortable:true, filter:true, 
-                render: row => (
-        <span>{moment(row.date).format('dddd')}</span>)},
-    {field:'duration', sortable:true, filter:true},
-    {field:'activity', sortable:true, filter:true},
+    {field: 'date', cellRenderer: (data) => 
+    { return moment(data.value).format('LLL');}, sortable: true, filter: true},
+    {field: 'duration', sortable: true, filter: true},
+    {field: 'activity', sortable: true, filter: true},
+    {headerName: 'Customer', field: 'customer.firstname', sortable: true, filter: true},
+    {headerName: '', field: 'customer.lastname', sortable: true, filter: true},
 ]
 
 
@@ -39,7 +40,7 @@ return (
           rowData={training}
           columnDefs={columns}
           pagination={true}
-          paginationPageSize={5}
+          paginationPageSize={10}
       />
  <div>
 

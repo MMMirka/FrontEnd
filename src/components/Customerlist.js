@@ -21,7 +21,6 @@ function Customerlist() {
   }
 
   const columns =[
-      {field:'firstname', sortable:true, filter: true,},
       {field:'firstname', sortable:true, filter:true,},
       {field:'lastname', sortable:true, filter:true},
       {field:'streetaddress', sortable:true, filter:true},

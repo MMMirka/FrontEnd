@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 
+
 function App() {
 
   const ColorButton = withStyles((theme) => ({
@@ -40,6 +41,7 @@ function App() {
           <ColorButton variant="contained" color="primary" href="/customers">Customers </ColorButton>
           &nbsp;&nbsp;&nbsp;
           <ColorButton variant="contained" color="primary" href="/training">Training</ColorButton>
+        
         </Toolbar>
       </AppBar>
       <BrowserRouter>
