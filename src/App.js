@@ -37,10 +37,8 @@ function App() {
           <Typography variant="h6" >
             Personal trainer
           </Typography> 
-          &nbsp;&nbsp;&nbsp;
-          <ColorButton variant="contained" color="primary" href="/customers">Customers </ColorButton>
-          &nbsp;&nbsp;&nbsp;
-          <ColorButton variant="contained" color="primary" href="/training">Training</ColorButton>
+          <ColorButton style={{marginLeft:10}} variant="contained" color="primary" href="/customers">Customers </ColorButton>
+          <ColorButton style={{marginLeft:10}} variant="contained" color="primary" href="/training">Training</ColorButton>
         
         </Toolbar>
       </AppBar>
